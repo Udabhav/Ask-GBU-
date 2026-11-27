@@ -1,13 +1,13 @@
 """Load and validate the Ask GBU knowledge base.
 
 Run from the project root:
-    python src/data_loader.py
+    python -m src.data_loader
 """
 
 import json
 from pathlib import Path
 
-KB_PATH = Path(__file__).resolve().parent.parent / "data" / "knowledge_base.json"
+from src.config import KB_PATH
 
 REQUIRED_FIELDS = [
     "id",
