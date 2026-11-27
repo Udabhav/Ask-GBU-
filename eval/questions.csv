@@ -1,0 +1,139 @@
+question,expected_id,language,kind,split
+How much is the semester fee for B.Tech in Computer Science?,fee_btech_cse_2026,en,direct,dev
+cse btech krne me har sem kitna paisa lagta hai,fee_btech_cse_2026,hinglish,paraphrase,test
+बीटेक कंप्यूटर साइंस की एक सेमेस्टर की फीस बताइए,fee_btech_cse_2026,hi,direct,dev
+what will i pay per semester for computer engineering,fee_btech_cse_2026,en,paraphrase,test
+btech cse ki fess kitni h,fee_btech_cse_2026,hinglish,typo,dev
+सीएसई बीटेक का शुल्क कितना है,fee_btech_cse_2026,hi,paraphrase,test
+How much is the counselling and registration fee?,fee_registration_2026,en,direct,test
+registartion ke time kitne paise dene hote hai,fee_registration_2026,hinglish,typo,dev
+पंजीकरण शुल्क कितना देना होगा,fee_registration_2026,hi,paraphrase,dev
+Is there a one-time fee when I register for admission?,fee_registration_2026,en,paraphrase,dev
+counselling fees kitni lagti hai gbu mein,fee_registration_2026,hinglish,direct,test
+काउंसलिंग फीस कितनी है,fee_registration_2026,hi,direct,test
+Do I get my security deposit back?,fee_security_2026,en,paraphrase,dev
+security amount refund hota hai kya,fee_security_2026,hinglish,paraphrase,dev
+सिक्योरिटी डिपॉजिट कितना जमा करना होता है,fee_security_2026,hi,direct,dev
+how much is the security fee and is it refundable,fee_security_2026,en,direct,test
+securty fee wapis milti hai ya nahi,fee_security_2026,hinglish,typo,test
+क्या सुरक्षा राशि लौटाई जाती है,fee_security_2026,hi,paraphrase,test
+What is the library fee each semester?,fee_library_sports_2026,en,direct,dev
+sports fee kitna lagta h har sem,fee_library_sports_2026,hinglish,direct,dev
+खेल और पुस्तकालय शुल्क कितना है,fee_library_sports_2026,hi,paraphrase,dev
+how much do i pay for the libary and sports every semester,fee_library_sports_2026,en,typo,test
+library aur sports ke liye alag se paise dene padte hai kya,fee_library_sports_2026,hinglish,paraphrase,test
+लाइब्रेरी फीस हर सेमेस्टर कितनी लगती है,fee_library_sports_2026,hi,direct,test
+What is the yearly rent for a double seated hostel room?,hostel_fees_2026,en,direct,dev
+hostel aur mess ka kharcha kitna aata hai saal ka,hostel_fees_2026,hinglish,paraphrase,test
+हॉस्टल में रहने का खर्च कितना है,hostel_fees_2026,hi,paraphrase,dev
+how much are the mess charges per year,hostel_fees_2026,en,direct,test
+hostal fee kitni hai single room ki,hostel_fees_2026,hinglish,typo,dev
+डबल रूम का सालाना किराया कितना है,hostel_fees_2026,hi,direct,test
+How many girls hostels are there at GBU?,hostel_count_2026,en,direct,test
+gbu mein total kitne hostel hai boys ke,hostel_count_2026,hinglish,direct,dev
+जीबीयू में कुल कितने छात्रावास हैं,hostel_count_2026,hi,paraphrase,dev
+number of hostels for boys and girls,hostel_count_2026,en,paraphrase,dev
+ladkiyon ke liye kitne hostal hai,hostel_count_2026,hinglish,typo,test
+लड़कियों के कितने हॉस्टल हैं,hostel_count_2026,hi,direct,test
+Do first year girls get a single or shared room?,hostel_room_type_girls,en,direct,dev
+girls hostel me 1st year me room share karna padta hai kya,hostel_room_type_girls,hinglish,paraphrase,test
+लड़कियों को हॉस्टल में कैसा कमरा मिलता है,hostel_room_type_girls,hi,direct,dev
+will a girl get a single room in second year,hostel_room_type_girls,en,paraphrase,test
+grls hostel me konsa room milta h,hostel_room_type_girls,hinglish,typo,dev
+छात्राओं को दूसरे साल से सिंगल रूम मिलता है क्या,hostel_room_type_girls,hi,paraphrase,test
+What is the process to get a hostel room?,hostel_allotment,en,direct,dev
+hostel seat pehle aao pehle pao se milti hai kya,hostel_allotment,hinglish,paraphrase,dev
+हॉस्टल का आवंटन किस आधार पर होता है,hostel_allotment,hi,paraphrase,dev
+how do i apply for hostel exemption,hostel_allotment,en,paraphrase,test
+hostel allotmnt ka process kya hai,hostel_allotment,hinglish,typo,test
+हॉस्टल में कमरा पाने के लिए क्या करना होगा,hostel_allotment,hi,direct,test
+What is the phone number of the hostel office?,contact_hostel,en,direct,dev
+hostel wale office ki email id kya hai,contact_hostel,hinglish,direct,test
+हॉस्टल कार्यालय से संपर्क कैसे करें,contact_hostel,hi,paraphrase,dev
+how can i contact the hostel administration,contact_hostel,en,paraphrase,test
+hostel ofice ka number chahiye,contact_hostel,hinglish,typo,dev
+हॉस्टल ऑफिस का ईमेल पता क्या है,contact_hostel,hi,direct,test
+Is admission for 2026-27 still open?,admissions_status_2026,en,direct,test
+abhi admission le sakte hai kya gbu me,admissions_status_2026,hinglish,paraphrase,test
+क्या प्रवेश अभी खुले हैं,admissions_status_2026,hi,direct,dev
+Have the admissions closed for this session?,admissions_status_2026,en,paraphrase,dev
+admision band ho gaya kya,admissions_status_2026,hinglish,typo,dev
+इस साल दाखिला मिल सकता है क्या,admissions_status_2026,hi,paraphrase,test
+What is the email of the admissions office?,contact_admissions,en,direct,test
+admission related query ke liye kis number pe call karu,contact_admissions,hinglish,paraphrase,dev
+प्रवेश कार्यालय का फोन नंबर क्या है,contact_admissions,hi,direct,dev
+who do i call for admission queries,contact_admissions,en,paraphrase,dev
+admisson office ka phone no.,contact_admissions,hinglish,typo,test
+दाखिले के बारे में ईमेल कहाँ भेजें,contact_admissions,hi,paraphrase,test
+"I am a foreign student, whom should I contact?",contact_international,en,paraphrase,dev
+international students ke liye helpline number kya hai,contact_international,hinglish,direct,dev
+अंतरराष्ट्रीय छात्रों के लिए ईमेल क्या है,contact_international,hi,direct,dev
+contact details of the international affairs office,contact_international,en,direct,test
+videshi student hu admission ke liye kisse baat karu,contact_international,hinglish,paraphrase,test
+इंटरनेशनल अफेयर्स का नंबर बताइए,contact_international,hi,direct,test
+What is the full address of Gautam Buddha University?,contact_address,en,direct,test
+gbu kis jagah pe hai,contact_address,hinglish,paraphrase,dev
+गौतम बुद्ध विश्वविद्यालय कहाँ है,contact_address,hi,direct,dev
+which city is GBU in,contact_address,en,paraphrase,dev
+gbu ka adress bata do,contact_address,hinglish,typo,test
+विश्वविद्यालय का पिन कोड क्या है,contact_address,hi,paraphrase,test
+How much scholarship do SC/ST students get on tuition fee?,scholarship_sc_st,en,direct,dev
+sc st walo ko fees me kitni chhut milti hai,scholarship_sc_st,hinglish,paraphrase,dev
+अनुसूचित जाति के छात्रों को कितनी छात्रवृत्ति मिलती है,scholarship_sc_st,hi,paraphrase,dev
+is there any fee concession for scheduled caste students,scholarship_sc_st,en,paraphrase,test
+sc/st scholarshp kitni hai,scholarship_sc_st,hinglish,typo,test
+एससी एसटी छात्रों को फीस में कितनी छूट है,scholarship_sc_st,hi,direct,test
+What types of scholarships are available at GBU?,scholarship_general,en,direct,dev
+top rank walo ko koi scholarship milti hai kya,scholarship_general,hinglish,paraphrase,dev
+जीबीयू में कौन कौन सी छात्रवृत्तियाँ मिलती हैं,scholarship_general,hi,direct,dev
+is there a merit based scholarship,scholarship_general,en,direct,test
+naye students ke liye scholarship hai kya,scholarship_general,hinglish,paraphrase,test
+मेधावी छात्रों के लिए कोई स्कॉलरशिप है क्या,scholarship_general,hi,paraphrase,test
+who will win the IPL this year,none,en,off_topic,dev
+how to make pasta at home,none,en,off_topic,dev
+what is machine learning,none,en,off_topic,dev
+write an email to my boss for leave,none,en,off_topic,dev
+ek mast movie suggest karo,none,hinglish,off_topic,dev
+aaj delhi me kitni garmi hai,none,hinglish,off_topic,dev
+mujhe neend nahi aati kya karu,none,hinglish,off_topic,dev
+bhai koi game batao time pass ke liye,none,hinglish,off_topic,dev
+सोना आज कितने का है,none,hi,off_topic,dev
+ताजमहल किसने बनवाया,none,hi,off_topic,dev
+what is the capital of australia,none,en,off_topic,test
+how do i reset my instagram password,none,en,off_topic,test
+translate good morning to spanish,none,en,off_topic,test
+best biryani in noida,none,en,off_topic,test
+petrol ka rate kya hai aaj,none,hinglish,off_topic,test
+virat kohli ke kitne century hai,none,hinglish,off_topic,test
+greater noida me ghumne ki jagah batao,none,hinglish,off_topic,test
+bhai gf ko kya gift du,none,hinglish,off_topic,test
+गणित का सवाल हल करो 12 गुणा 13,none,hi,off_topic,test
+मेरा मोबाइल बार बार हैंग होता है,none,hi,off_topic,test
+What is the placement record of GBU?,none,en,not_in_kb,dev
+What is the fee for B.Tech Mechanical Engineering?,none,en,not_in_kb,dev
+Who is the vice chancellor of GBU?,none,en,not_in_kb,dev
+Is there a gym on campus?,none,en,not_in_kb,dev
+mba ki fees kitni hai gbu me,none,hinglish,not_in_kb,dev
+exam kab se start honge,none,hinglish,not_in_kb,dev
+library kitne baje tak khuli rehti hai,none,hinglish,not_in_kb,dev
+hostel me internet ki speed kaisi hai,none,hinglish,not_in_kb,dev
+GBU ki NIRF ranking kya hai,none,hinglish,not_in_kb,dev
+boys ko first year me kaunsa room milta hai,none,hinglish,not_in_kb,dev
+campus mein sports facilities kya hai,none,hinglish,not_in_kb,dev
+क्या कैंपस में बस सुविधा है,none,hi,not_in_kb,dev
+बी.टेक के लिए योग्यता क्या है,none,hi,not_in_kb,dev
+हॉस्टल में रैगिंग होती है क्या,none,hi,not_in_kb,dev
+Which companies come for campus placement?,none,en,not_in_kb,test
+what is the fee for MBA program,none,en,not_in_kb,test
+What is the minimum attendance required?,none,en,not_in_kb,test
+Which documents should I carry on the counselling day?,none,en,not_in_kb,test
+law ki fees kitni hai gbu me,none,hinglish,not_in_kb,test
+semester exam ka time table kab aayega,none,hinglish,not_in_kb,test
+canteen ka khana kaisa hai,none,hinglish,not_in_kb,test
+kya gbu UGC approved hai,none,hinglish,not_in_kb,test
+hostel me washing machine hai kya,none,hinglish,not_in_kb,test
+cse ka cutoff kitna jata hai,none,hinglish,not_in_kb,test
+hostel ka gate kitne baje band hota hai,none,hinglish,not_in_kb,test
+क्या कैंपस में अस्पताल है,none,hi,not_in_kb,test
+प्लेसमेंट में औसत पैकेज कितना है,none,hi,not_in_kb,test
+सेमेस्टर परीक्षा की फीस कितनी है,none,hi,not_in_kb,test

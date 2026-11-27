@@ -2,5 +2,7 @@ sentence-transformers
 faiss-cpu
 numpy
 pandas
+scikit-learn
+matplotlib
 streamlit
 pytest

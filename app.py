@@ -61,10 +61,18 @@ def show_message(message: dict) -> None:
                 f"Academic year: {result['academic_year']} · "
                 f"[Official source]({result['source_url']})"
             )
+        elif result.get("reason") == "out_of_scope":
+            st.caption("This question does not look like it is about GBU.")
         else:
             st.caption("No verified answer found for this question.")
 
         with st.expander("How was this matched?"):
+            if result.get("intent"):
+                searched_in = result["topic_filter"] or "all topics"
+                st.write(
+                    f"Detected topic: **{result['intent']}** "
+                    f"(confidence {result['intent_confidence']:.2f}) · searched in: {searched_in}"
+                )
             st.write(
                 f"Best score: {result['score']} (answers need at least {SIMILARITY_THRESHOLD})"
             )

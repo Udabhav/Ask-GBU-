@@ -60,6 +60,10 @@ def validate_records(records: list) -> list:
         if topic and topic not in ALLOWED_TOPICS:
             errors.append(f"{label}: unknown topic '{topic}'")
 
+        for extra in record.get("also_topics", []):
+            if extra not in ALLOWED_TOPICS:
+                errors.append(f"{label}: unknown topic '{extra}' in also_topics")
+
         url = record.get("source_url", "")
         if url and not url.startswith("https://"):
             errors.append(f"{label}: source_url must start with https://")

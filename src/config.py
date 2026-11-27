@@ -12,8 +12,16 @@ EMBEDDING_MODEL = "paraphrase-multilingual-MiniLM-L12-v2"
 TOP_K = 3
 
 # If the best match scores below this (0 to 1), the bot says it does not know.
-# Starting value only. It will be tuned in Phase 5 using the test set.
-SIMILARITY_THRESHOLD = 0.5
+# Tuned in Phase 5 on the dev split of eval/questions.csv (the starting value was 0.50).
+# Re-tune with `python -m eval.evaluate` whenever the knowledge base changes.
+SIMILARITY_THRESHOLD = 0.67
+
+# Intent classifier settings (starting values; tune in Phase 5, not on the test set).
+USE_INTENT_FILTER = True
+# Search only inside the predicted topic when the classifier is at least this sure.
+INTENT_CONFIDENCE = 0.5
+# Treat the question as out of scope when "other" is predicted with at least this confidence.
+OTHER_CONFIDENCE = 0.6
 
 FALLBACK_MESSAGE = (
     "I don't have a verified answer for this. Please contact the relevant office, "

@@ -8,46 +8,25 @@ Run from the project root:
     python -m src.intent_model
 """
 
-import csv
-from pathlib import Path
-
 import numpy as np
 import torch
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 from src.config import ROOT
 from src.embedder import encode
+from src.intent import LABELS, load_dataset, train_baseline
 
-DATA_PATH = ROOT / "data" / "intent_dataset.csv"
 MODEL_DIR = ROOT / "models" / "intent_distilbert"
 # Multilingual model: the dataset has English, Hinglish, and Devanagari Hindi.
 # The English-only "uncased" model strips Hindi vowel signs, so it cannot read Hindi properly.
 BERT_NAME = "distilbert-base-multilingual-cased"
 
-LABELS = ["admissions", "contacts", "fees", "hostel", "other", "scholarships"]
-LABEL2ID = {label: i for i, label in enumerate(LABELS)}
 
-
-def load_dataset():
-    """Return (train_texts, train_labels, test_texts, test_labels). Labels are integers."""
-    splits = {"train": ([], []), "test": ([], [])}
-    with open(DATA_PATH, encoding="utf-8", newline="") as f:
-        for row in csv.DictReader(f):
-            texts, labels = splits[row["split"]]
-            texts.append(row["text"].strip())
-            labels.append(LABEL2ID[row["label"]])
-    return (*splits["train"], *splits["test"])
-
-
-def train_baseline(train_texts, train_labels, test_texts):
+def baseline_predictions(train_texts, train_labels, test_texts):
     """Embeddings + logistic regression. Returns predicted label ids for the test set."""
-    X_train = encode(train_texts)
-    X_test = encode(test_texts)
-    clf = LogisticRegression(max_iter=2000, C=5.0)
-    clf.fit(X_train, train_labels)
-    return clf.predict(X_test)
+    clf = train_baseline(train_texts, train_labels)
+    return clf.predict(encode(test_texts))
 
 
 def train_bert(train_texts, train_labels, test_texts, epochs=8, lr=3e-5, batch_size=16):
@@ -110,7 +89,7 @@ if __name__ == "__main__":
     train_texts, train_labels, test_texts, test_labels = load_dataset()
     print(f"Train: {len(train_texts)} examples, Test: {len(test_texts)} examples")
 
-    baseline_preds = train_baseline(train_texts, train_labels, test_texts)
+    baseline_preds = baseline_predictions(train_texts, train_labels, test_texts)
     report("Baseline: embeddings + logistic regression", test_labels, baseline_preds)
 
     print("\nTraining DistilBERT...")

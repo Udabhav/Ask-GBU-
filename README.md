@@ -37,6 +37,22 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+## Evaluation
+
+```bash
+python -m eval.evaluate
+```
+
+This asks the bot 138 unseen questions from `eval/questions.csv` in English, Hinglish, and Hindi. 48 of them should get the fallback. The threshold is tuned on the dev split, and results are reported on the test split. Results are in [eval/results/results.md](eval/results/results.md), and the failure analysis is in [eval/error_analysis.md](eval/error_analysis.md).
+
+Test split, current app settings (MiniLM + intent classifier, threshold 0.67):
+
+| Right answer (answerable) | Refused (should refuse) | Wrong-answer rate | Overall accuracy |
+|---|---|---|---|
+| 46.7% | 95.8% | 8.7% | 63.8% |
+
+Hindi questions are the weakest part (4 of 15 right), because the knowledge base has almost no Hindi paraphrases.
+
 ## Data sources
 
 Every answer must cite an official GBU source. Current sources:
