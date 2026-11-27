@@ -2,9 +2,17 @@
 # Exact versions, so a fresh install gets the same versions the tests passed with.
 sentence-transformers==6.3.0
 transformers==5.24.1
-torch==2.15.0
 numpy==2.3.4
 scikit-learn==1.9.1
 matplotlib==3.10.7
 streamlit==1.67.0
 pytest==9.2.0
+
+# torch: on Linux x86_64 (for example Streamlit Community Cloud), use the CPU-only build.
+# The default Linux build also downloads several GB of NVIDIA GPU libraries the app does not need.
+torch @ https://download.pytorch.org/whl/cpu/torch-2.15.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and platform_machine == "x86_64" and python_version == "3.11"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.15.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and platform_machine == "x86_64" and python_version == "3.12"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.15.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and platform_machine == "x86_64" and python_version == "3.13"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.15.0%2Bcpu-cp314-cp314-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and platform_machine == "x86_64" and python_version == "3.14"
+# Windows, macOS, and other machines: the normal build from PyPI.
+torch==2.15.0 ; sys_platform != "linux" or platform_machine != "x86_64"

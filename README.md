@@ -39,7 +39,7 @@ flowchart TD
 
 ## Setup
 
-Requires **Python 3.11 or newer**.
+Requires **Python 3.11 or newer**. Works on Windows, Linux, and Apple Silicon Macs with macOS 14 or newer. PyTorch 2.15 has no builds for Intel Macs.
 
 ```bash
 python -m venv .venv
@@ -69,6 +69,14 @@ Run the tests:
 ```bash
 python -m pytest
 ```
+
+## Deployment (Streamlit Community Cloud)
+
+1. Sign in at [share.streamlit.io](https://share.streamlit.io) with the GitHub account that owns this repository. If the repository is private, allow access to private repositories when asked.
+2. Create an app from GitHub: repository `Udabhav/Ask-GBU-`, branch `main`, main file `app.py`.
+3. Under **Advanced settings**, choose Python 3.12, then deploy.
+
+The first build takes a few minutes. On Linux, `requirements.txt` installs the CPU-only PyTorch build, because the default build also downloads several GB of GPU libraries. The first visit then downloads the embedding model, which takes about a minute. Free apps sleep after a period with no visitors and wake up when someone opens them.
 
 ## Evaluation
 
