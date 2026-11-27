@@ -221,3 +221,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Ask GBU: trained model weights (large files, rebuild with python -m src.intent_model)
+models/
