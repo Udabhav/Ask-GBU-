@@ -45,13 +45,13 @@ python -m eval.evaluate
 
 This asks the bot 138 unseen questions from `eval/questions.csv` in English, Hinglish, and Hindi. 48 of them should get the fallback. The threshold is tuned on the dev split, and results are reported on the test split. Results are in [eval/results/results.md](eval/results/results.md), and the failure analysis is in [eval/error_analysis.md](eval/error_analysis.md).
 
-Test split, current app settings (MiniLM + intent classifier, threshold 0.67):
+Test split, current app settings (MiniLM + intent classifier, threshold 0.69, knowledge base v0.2):
 
 | Right answer (answerable) | Refused (should refuse) | Wrong-answer rate | Overall accuracy |
 |---|---|---|---|
-| 46.7% | 95.8% | 8.7% | 63.8% |
+| 64.4% | 91.7% | 10.1% | 73.9% |
 
-Hindi questions are the weakest part (4 of 15 right), because the knowledge base has almost no Hindi paraphrases.
+Adding Hindi and Hinglish paraphrases raised overall accuracy from 63.8% to 73.9%, and Hindi right answers from 4 to 8 of 15. Hinglish (7 of 15) and typos are now the weakest parts.
 
 ## Data sources
 

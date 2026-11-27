@@ -1,70 +1,70 @@
 question,language,kind,expected_id,outcome,got,score,top3,intent,intent_confidence
-cse btech krne me har sem kitna paisa lagta hai,hinglish,paraphrase,fee_btech_cse_2026,missed,fallback (low score; top was contact_address),0.372,contact_address hostel_count_2026 contact_hostel,hostel,0.326
-what will i pay per semester for computer engineering,en,paraphrase,fee_btech_cse_2026,missed,fallback (low score; top was fee_btech_cse_2026),0.642,fee_btech_cse_2026 fee_library_sports_2026 fee_registration_2026,fees,0.888
-सीएसई बीटेक का शुल्क कितना है,hi,paraphrase,fee_btech_cse_2026,missed,fallback (low score; top was fee_btech_cse_2026),0.581,fee_btech_cse_2026 fee_library_sports_2026 fee_registration_2026,fees,0.83
-How much is the counselling and registration fee?,en,direct,fee_registration_2026,correct,fee_registration_2026,0.793,fee_registration_2026 fee_library_sports_2026 fee_btech_cse_2026,fees,0.712
+cse btech krne me har sem kitna paisa lagta hai,hinglish,paraphrase,fee_btech_cse_2026,missed,fallback (low score; top was fee_library_sports_2026),0.680,fee_library_sports_2026 hostel_allotment scholarship_general,hostel,0.326
+what will i pay per semester for computer engineering,en,paraphrase,fee_btech_cse_2026,correct,fee_btech_cse_2026,0.765,fee_btech_cse_2026 fee_library_sports_2026 fee_registration_2026,fees,0.888
+सीएसई बीटेक का शुल्क कितना है,hi,paraphrase,fee_btech_cse_2026,missed,fallback (low score; top was fee_btech_cse_2026),0.597,fee_btech_cse_2026 fee_registration_2026 fee_security_2026,fees,0.83
+How much is the counselling and registration fee?,en,direct,fee_registration_2026,correct,fee_registration_2026,0.825,fee_registration_2026 fee_security_2026 fee_btech_cse_2026,fees,0.712
 counselling fees kitni lagti hai gbu mein,hinglish,direct,fee_registration_2026,correct,fee_registration_2026,0.771,fee_registration_2026 fee_library_sports_2026 hostel_fees_2026,fees,0.429
-काउंसलिंग फीस कितनी है,hi,direct,fee_registration_2026,missed,fallback (low score; top was hostel_fees_2026),0.312,hostel_fees_2026 hostel_count_2026 contact_hostel,fees,0.371
+काउंसलिंग फीस कितनी है,hi,direct,fee_registration_2026,missed,fallback (low score; top was hostel_fees_2026),0.658,hostel_fees_2026 fee_registration_2026 fee_security_2026,fees,0.371
 how much is the security fee and is it refundable,en,direct,fee_security_2026,correct,fee_security_2026,0.928,fee_security_2026 fee_registration_2026 fee_library_sports_2026,fees,0.934
 securty fee wapis milti hai ya nahi,hinglish,typo,fee_security_2026,wrong,fee_registration_2026,0.702,fee_registration_2026 fee_security_2026 fee_library_sports_2026,fees,0.769
-क्या सुरक्षा राशि लौटाई जाती है,hi,paraphrase,fee_security_2026,correct,fee_security_2026,0.738,fee_security_2026 fee_library_sports_2026 scholarship_sc_st,fees,0.329
-how much do i pay for the libary and sports every semester,en,typo,fee_library_sports_2026,correct,fee_library_sports_2026,0.834,fee_library_sports_2026 fee_btech_cse_2026 fee_registration_2026,fees,0.812
-library aur sports ke liye alag se paise dene padte hai kya,hinglish,paraphrase,fee_library_sports_2026,missed,fallback (low score; top was contact_admissions),0.553,contact_admissions contact_hostel admissions_status_2026,other,0.583
-लाइब्रेरी फीस हर सेमेस्टर कितनी लगती है,hi,direct,fee_library_sports_2026,missed,fallback (low score; top was fee_library_sports_2026),0.554,fee_library_sports_2026 fee_btech_cse_2026 fee_registration_2026,fees,0.814
-hostel aur mess ka kharcha kitna aata hai saal ka,hinglish,paraphrase,hostel_fees_2026,wrong,contact_hostel,0.782,contact_hostel hostel_allotment hostel_count_2026,hostel,0.727
-how much are the mess charges per year,en,direct,hostel_fees_2026,missed,fallback (low score; top was fee_library_sports_2026),0.512,fee_library_sports_2026 fee_registration_2026 fee_security_2026,fees,0.445
-डबल रूम का सालाना किराया कितना है,hi,direct,hostel_fees_2026,wrong,hostel_room_type_girls,0.78,hostel_room_type_girls hostel_fees_2026 hostel_count_2026,hostel,0.915
+क्या सुरक्षा राशि लौटाई जाती है,hi,paraphrase,fee_security_2026,correct,fee_security_2026,0.841,fee_security_2026 admissions_status_2026 hostel_allotment,fees,0.329
+how much do i pay for the libary and sports every semester,en,typo,fee_library_sports_2026,correct,fee_library_sports_2026,0.834,fee_library_sports_2026 fee_registration_2026 fee_security_2026,fees,0.812
+library aur sports ke liye alag se paise dene padte hai kya,hinglish,paraphrase,fee_library_sports_2026,missed,fallback (low score; top was contact_address),0.683,contact_address admissions_status_2026 fee_btech_cse_2026,other,0.583
+लाइब्रेरी फीस हर सेमेस्टर कितनी लगती है,hi,direct,fee_library_sports_2026,correct,fee_library_sports_2026,0.827,fee_library_sports_2026 fee_btech_cse_2026 fee_security_2026,fees,0.814
+hostel aur mess ka kharcha kitna aata hai saal ka,hinglish,paraphrase,hostel_fees_2026,wrong,contact_hostel,0.782,contact_hostel hostel_allotment hostel_room_type_girls,hostel,0.727
+how much are the mess charges per year,en,direct,hostel_fees_2026,missed,fallback (low score; top was fee_security_2026),0.658,fee_security_2026 fee_registration_2026 hostel_fees_2026,fees,0.445
+डबल रूम का सालाना किराया कितना है,hi,direct,hostel_fees_2026,wrong,hostel_room_type_girls,0.780,hostel_room_type_girls hostel_fees_2026 hostel_count_2026,hostel,0.915
 How many girls hostels are there at GBU?,en,direct,hostel_count_2026,correct,hostel_count_2026,0.915,hostel_count_2026 hostel_room_type_girls hostel_allotment,hostel,0.892
-ladkiyon ke liye kitne hostal hai,hinglish,typo,hostel_count_2026,missed,fallback (low score; top was hostel_count_2026),0.309,hostel_count_2026 hostel_allotment contact_hostel,hostel,0.538
-लड़कियों के कितने हॉस्टल हैं,hi,direct,hostel_count_2026,missed,fallback (low score; top was hostel_count_2026),0.536,hostel_count_2026 hostel_room_type_girls hostel_fees_2026,hostel,0.832
+ladkiyon ke liye kitne hostal hai,hinglish,typo,hostel_count_2026,missed,fallback (low score; top was hostel_allotment),0.623,hostel_allotment hostel_fees_2026 hostel_room_type_girls,hostel,0.538
+लड़कियों के कितने हॉस्टल हैं,hi,direct,hostel_count_2026,correct,hostel_count_2026,0.885,hostel_count_2026 hostel_room_type_girls hostel_fees_2026,hostel,0.832
 girls hostel me 1st year me room share karna padta hai kya,hinglish,paraphrase,hostel_room_type_girls,correct,hostel_room_type_girls,0.766,hostel_room_type_girls hostel_count_2026 hostel_allotment,hostel,0.981
 will a girl get a single room in second year,en,paraphrase,hostel_room_type_girls,correct,hostel_room_type_girls,0.795,hostel_room_type_girls hostel_fees_2026 hostel_count_2026,hostel,0.954
-छात्राओं को दूसरे साल से सिंगल रूम मिलता है क्या,hi,paraphrase,hostel_room_type_girls,missed,fallback (low score; top was hostel_room_type_girls),0.638,hostel_room_type_girls hostel_count_2026 hostel_fees_2026,hostel,0.912
-how do i apply for hostel exemption,en,paraphrase,hostel_allotment,correct,hostel_allotment,0.91,hostel_allotment contact_hostel hostel_fees_2026,hostel,0.866
-hostel allotmnt ka process kya hai,hinglish,typo,hostel_allotment,correct,hostel_allotment,0.772,hostel_allotment contact_hostel hostel_count_2026,hostel,0.854
-हॉस्टल में कमरा पाने के लिए क्या करना होगा,hi,direct,hostel_allotment,missed,fallback (low score; top was hostel_room_type_girls),0.572,hostel_room_type_girls hostel_fees_2026 hostel_allotment,hostel,0.975
+छात्राओं को दूसरे साल से सिंगल रूम मिलता है क्या,hi,paraphrase,hostel_room_type_girls,correct,hostel_room_type_girls,0.862,hostel_room_type_girls hostel_count_2026 hostel_fees_2026,hostel,0.912
+how do i apply for hostel exemption,en,paraphrase,hostel_allotment,correct,hostel_allotment,0.910,hostel_allotment contact_hostel hostel_fees_2026,hostel,0.866
+hostel allotmnt ka process kya hai,hinglish,typo,hostel_allotment,correct,hostel_allotment,0.791,hostel_allotment contact_hostel hostel_room_type_girls,hostel,0.854
+हॉस्टल में कमरा पाने के लिए क्या करना होगा,hi,direct,hostel_allotment,wrong,hostel_fees_2026,0.720,hostel_fees_2026 hostel_room_type_girls hostel_allotment,hostel,0.975
 hostel wale office ki email id kya hai,hinglish,direct,contact_hostel,correct,contact_hostel,0.778,contact_hostel contact_admissions contact_address,contacts,0.789
 how can i contact the hostel administration,en,paraphrase,contact_hostel,correct,contact_hostel,0.857,contact_hostel contact_admissions contact_international,contacts,0.754
-हॉस्टल ऑफिस का ईमेल पता क्या है,hi,direct,contact_hostel,correct,contact_hostel,0.739,contact_hostel contact_admissions contact_international,contacts,0.994
+हॉस्टल ऑफिस का ईमेल पता क्या है,hi,direct,contact_hostel,wrong,contact_admissions,0.842,contact_admissions contact_hostel contact_international,contacts,0.994
 Is admission for 2026-27 still open?,en,direct,admissions_status_2026,correct,admissions_status_2026,0.738,admissions_status_2026,admissions,0.866
-abhi admission le sakte hai kya gbu me,hinglish,paraphrase,admissions_status_2026,missed,fallback (low score; top was admissions_status_2026),0.644,admissions_status_2026,admissions,0.525
-इस साल दाखिला मिल सकता है क्या,hi,paraphrase,admissions_status_2026,missed,fallback (low score; top was admissions_status_2026),0.497,admissions_status_2026,admissions,0.585
-What is the email of the admissions office?,en,direct,contact_admissions,correct,contact_admissions,0.83,contact_admissions contact_international contact_hostel,contacts,0.935
+abhi admission le sakte hai kya gbu me,hinglish,paraphrase,admissions_status_2026,correct,admissions_status_2026,0.850,admissions_status_2026,admissions,0.525
+इस साल दाखिला मिल सकता है क्या,hi,paraphrase,admissions_status_2026,missed,fallback (low score; top was admissions_status_2026),0.506,admissions_status_2026,admissions,0.585
+What is the email of the admissions office?,en,direct,contact_admissions,correct,contact_admissions,0.830,contact_admissions contact_international contact_hostel,contacts,0.935
 admisson office ka phone no.,hinglish,typo,contact_admissions,missed,fallback (low score; top was contact_hostel),0.552,contact_hostel contact_admissions contact_international,contacts,0.881
-दाखिले के बारे में ईमेल कहाँ भेजें,hi,paraphrase,contact_admissions,correct,contact_admissions,0.684,contact_admissions contact_international contact_hostel,contacts,0.946
-contact details of the international affairs office,en,direct,contact_international,correct,contact_international,0.801,contact_international contact_admissions contact_hostel,contacts,0.94
-videshi student hu admission ke liye kisse baat karu,hinglish,paraphrase,contact_international,wrong,contact_admissions,0.686,contact_admissions contact_address contact_hostel,contacts,0.443
-इंटरनेशनल अफेयर्स का नंबर बताइए,hi,direct,contact_international,missed,fallback (low score; top was contact_hostel),0.622,contact_hostel contact_international contact_admissions,contacts,0.893
-What is the full address of Gautam Buddha University?,en,direct,contact_address,missed,fallback (low score; top was contact_address),0.574,contact_address contact_hostel contact_admissions,contacts,0.947
-gbu ka adress bata do,hinglish,typo,contact_address,wrong,contact_hostel,0.689,contact_hostel contact_address contact_admissions,contacts,0.992
-विश्वविद्यालय का पिन कोड क्या है,hi,paraphrase,contact_address,missed,fallback (low score; top was contact_admissions),0.442,contact_admissions contact_international contact_address,contacts,0.625
+दाखिले के बारे में ईमेल कहाँ भेजें,hi,paraphrase,contact_admissions,correct,contact_admissions,0.775,contact_admissions contact_international contact_hostel,contacts,0.946
+contact details of the international affairs office,en,direct,contact_international,correct,contact_international,0.835,contact_international contact_admissions contact_hostel,contacts,0.94
+videshi student hu admission ke liye kisse baat karu,hinglish,paraphrase,contact_international,missed,fallback (low score; top was contact_admissions),0.686,contact_admissions contact_address fee_btech_cse_2026,contacts,0.443
+इंटरनेशनल अफेयर्स का नंबर बताइए,hi,direct,contact_international,correct,contact_international,0.820,contact_international contact_admissions contact_hostel,contacts,0.893
+What is the full address of Gautam Buddha University?,en,direct,contact_address,correct,contact_address,0.839,contact_address contact_hostel contact_admissions,contacts,0.947
+gbu ka adress bata do,hinglish,typo,contact_address,missed,fallback (low score; top was contact_hostel),0.689,contact_hostel contact_address contact_admissions,contacts,0.992
+विश्वविद्यालय का पिन कोड क्या है,hi,paraphrase,contact_address,missed,fallback (low score; top was contact_address),0.652,contact_address contact_admissions contact_international,contacts,0.625
 is there any fee concession for scheduled caste students,en,paraphrase,scholarship_sc_st,correct,scholarship_sc_st,0.701,scholarship_sc_st scholarship_general,scholarships,0.568
-sc/st scholarshp kitni hai,hinglish,typo,scholarship_sc_st,missed,fallback (low score; top was scholarship_sc_st),0.655,scholarship_sc_st contact_address contact_admissions,scholarships,0.272
+sc/st scholarshp kitni hai,hinglish,typo,scholarship_sc_st,correct,scholarship_sc_st,0.815,scholarship_sc_st fee_btech_cse_2026 contact_address,scholarships,0.272
 एससी एसटी छात्रों को फीस में कितनी छूट है,hi,direct,scholarship_sc_st,correct,scholarship_sc_st,0.852,scholarship_sc_st scholarship_general,scholarships,0.586
 is there a merit based scholarship,en,direct,scholarship_general,correct,scholarship_general,0.888,scholarship_general scholarship_sc_st,scholarships,0.993
-naye students ke liye scholarship hai kya,hinglish,paraphrase,scholarship_general,correct,scholarship_general,0.74,scholarship_general scholarship_sc_st,scholarships,0.841
-मेधावी छात्रों के लिए कोई स्कॉलरशिप है क्या,hi,paraphrase,scholarship_general,missed,fallback (low score; top was scholarship_sc_st),0.661,scholarship_sc_st scholarship_general,scholarships,0.898
-what is the capital of australia,en,off_topic,none,refused,fallback (out of scope),0.235,contact_address contact_international contact_hostel,other,0.841
+naye students ke liye scholarship hai kya,hinglish,paraphrase,scholarship_general,correct,scholarship_general,0.839,scholarship_general scholarship_sc_st,scholarships,0.841
+मेधावी छात्रों के लिए कोई स्कॉलरशिप है क्या,hi,paraphrase,scholarship_general,correct,scholarship_general,0.797,scholarship_general scholarship_sc_st,scholarships,0.898
+what is the capital of australia,en,off_topic,none,refused,fallback (out of scope),0.296,contact_address contact_international contact_hostel,other,0.841
 how do i reset my instagram password,en,off_topic,none,refused,fallback (out of scope),0.232,contact_hostel contact_admissions fee_security_2026,other,0.836
-translate good morning to spanish,en,off_topic,none,refused,fallback (out of scope),0.358,hostel_allotment contact_hostel hostel_count_2026,other,0.873
-best biryani in noida,en,off_topic,none,refused,fallback (low score; top was hostel_allotment),0.335,hostel_allotment contact_hostel contact_address,other,0.557
-petrol ka rate kya hai aaj,hinglish,off_topic,none,refused,fallback (low score; top was fee_security_2026),0.479,fee_security_2026 contact_admissions fee_registration_2026,other,0.551
-virat kohli ke kitne century hai,hinglish,off_topic,none,refused,fallback (low score; top was contact_address),0.537,contact_address scholarship_general hostel_count_2026,hostel,0.402
-greater noida me ghumne ki jagah batao,hinglish,off_topic,none,refused,fallback (out of scope),0.51,contact_hostel contact_address hostel_allotment,other,0.731
-bhai gf ko kya gift du,hinglish,off_topic,none,refused,fallback (low score; top was contact_admissions),0.664,contact_admissions admissions_status_2026 contact_hostel,other,0.432
-गणित का सवाल हल करो 12 गुणा 13,hi,off_topic,none,refused,fallback (out of scope),0.215,contact_hostel admissions_status_2026 fee_registration_2026,other,0.841
-मेरा मोबाइल बार बार हैंग होता है,hi,off_topic,none,refused,fallback (out of scope),0.26,contact_hostel fee_registration_2026 contact_international,other,0.702
+translate good morning to spanish,en,off_topic,none,refused,fallback (out of scope),0.358,hostel_allotment contact_hostel scholarship_general,other,0.873
+best biryani in noida,en,off_topic,none,refused,fallback (low score; top was contact_address),0.417,contact_address hostel_allotment admissions_status_2026,other,0.557
+petrol ka rate kya hai aaj,hinglish,off_topic,none,refused,fallback (low score; top was fee_security_2026),0.542,fee_security_2026 admissions_status_2026 hostel_room_type_girls,other,0.551
+virat kohli ke kitne century hai,hinglish,off_topic,none,refused,fallback (low score; top was fee_library_sports_2026),0.633,fee_library_sports_2026 contact_address scholarship_general,hostel,0.402
+greater noida me ghumne ki jagah batao,hinglish,off_topic,none,refused,fallback (out of scope),0.690,contact_address admissions_status_2026 hostel_room_type_girls,other,0.731
+bhai gf ko kya gift du,hinglish,off_topic,none,wrong,contact_address,0.705,contact_address admissions_status_2026 contact_admissions,other,0.432
+गणित का सवाल हल करो 12 गुणा 13,hi,off_topic,none,refused,fallback (out of scope),0.450,hostel_count_2026 fee_security_2026 hostel_allotment,other,0.841
+मेरा मोबाइल बार बार हैंग होता है,hi,off_topic,none,refused,fallback (out of scope),0.364,contact_international contact_hostel contact_admissions,other,0.702
 Which companies come for campus placement?,en,not_in_kb,none,refused,fallback (low score; top was scholarship_general),0.495,scholarship_general scholarship_sc_st,scholarships,0.564
-what is the fee for MBA program,en,not_in_kb,none,refused,fallback (low score; top was fee_btech_cse_2026),0.516,fee_btech_cse_2026 fee_registration_2026 fee_library_sports_2026,fees,0.761
+what is the fee for MBA program,en,not_in_kb,none,refused,fallback (low score; top was fee_registration_2026),0.554,fee_registration_2026 fee_btech_cse_2026 fee_library_sports_2026,fees,0.761
 What is the minimum attendance required?,en,not_in_kb,none,refused,fallback (low score; top was admissions_status_2026),0.513,admissions_status_2026,admissions,0.718
 Which documents should I carry on the counselling day?,en,not_in_kb,none,refused,fallback (low score; top was fee_registration_2026),0.512,fee_registration_2026 scholarship_general contact_admissions,scholarships,0.398
 law ki fees kitni hai gbu me,hinglish,not_in_kb,none,wrong,fee_security_2026,0.699,fee_security_2026 fee_registration_2026 fee_library_sports_2026,fees,0.802
 semester exam ka time table kab aayega,hinglish,not_in_kb,none,refused,fallback (low score; top was admissions_status_2026),0.576,admissions_status_2026 contact_hostel contact_admissions,admissions,0.467
-canteen ka khana kaisa hai,hinglish,not_in_kb,none,refused,fallback (low score; top was hostel_count_2026),0.37,hostel_count_2026 hostel_allotment contact_hostel,hostel,0.909
-kya gbu UGC approved hai,hinglish,not_in_kb,none,refused,fallback (low score; top was admissions_status_2026),0.55,admissions_status_2026,admissions,0.508
-hostel me washing machine hai kya,hinglish,not_in_kb,none,refused,fallback (low score; top was hostel_count_2026),0.52,hostel_count_2026 hostel_fees_2026 contact_hostel,hostel,0.936
-cse ka cutoff kitna jata hai,hinglish,not_in_kb,none,refused,fallback (low score; top was contact_address),0.472,contact_address scholarship_general hostel_fees_2026,other,0.325
-hostel ka gate kitne baje band hota hai,hinglish,not_in_kb,none,refused,fallback (low score; top was hostel_allotment),0.598,hostel_allotment hostel_count_2026 hostel_fees_2026,hostel,0.981
-क्या कैंपस में अस्पताल है,hi,not_in_kb,none,refused,fallback (low score; top was contact_hostel),0.453,contact_hostel hostel_allotment hostel_count_2026,hostel,0.867
-प्लेसमेंट में औसत पैकेज कितना है,hi,not_in_kb,none,refused,fallback (low score; top was fee_library_sports_2026),0.397,fee_library_sports_2026 fee_btech_cse_2026 fee_registration_2026,fees,0.512
-सेमेस्टर परीक्षा की फीस कितनी है,hi,not_in_kb,none,refused,fallback (low score; top was fee_library_sports_2026),0.609,fee_library_sports_2026 fee_registration_2026 fee_btech_cse_2026,fees,0.918
+canteen ka khana kaisa hai,hinglish,not_in_kb,none,refused,fallback (low score; top was hostel_fees_2026),0.459,hostel_fees_2026 hostel_allotment hostel_count_2026,hostel,0.909
+kya gbu UGC approved hai,hinglish,not_in_kb,none,refused,fallback (low score; top was admissions_status_2026),0.550,admissions_status_2026,admissions,0.508
+hostel me washing machine hai kya,hinglish,not_in_kb,none,refused,fallback (low score; top was hostel_count_2026),0.520,hostel_count_2026 hostel_room_type_girls hostel_fees_2026,hostel,0.936
+cse ka cutoff kitna jata hai,hinglish,not_in_kb,none,refused,fallback (low score; top was fee_library_sports_2026),0.650,fee_library_sports_2026 contact_address hostel_allotment,other,0.325
+hostel ka gate kitne baje band hota hai,hinglish,not_in_kb,none,refused,fallback (low score; top was hostel_count_2026),0.628,hostel_count_2026 hostel_allotment hostel_fees_2026,hostel,0.981
+क्या कैंपस में अस्पताल है,hi,not_in_kb,none,refused,fallback (low score; top was hostel_fees_2026),0.503,hostel_fees_2026 contact_hostel hostel_count_2026,hostel,0.867
+प्लेसमेंट में औसत पैकेज कितना है,hi,not_in_kb,none,refused,fallback (low score; top was fee_security_2026),0.618,fee_security_2026 fee_registration_2026 fee_btech_cse_2026,fees,0.512
+सेमेस्टर परीक्षा की फीस कितनी है,hi,not_in_kb,none,refused,fallback (low score; top was fee_btech_cse_2026),0.655,fee_btech_cse_2026 fee_registration_2026 fee_security_2026,fees,0.918

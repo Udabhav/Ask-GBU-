@@ -15,20 +15,20 @@ The threshold for each setup is chosen on the **dev** split. All result tables u
 
 | Setup | Top-1 | Top-3 | MRR |
 |---|---|---|---|
-| MiniLM, no intent | 64.4% | 86.7% | 0.748 |
-| MiniLM + intent | 68.9% | 86.7% | 0.770 |
-| mpnet, no intent | 71.1% | 88.9% | 0.789 |
-| mpnet + intent | 73.3% | 91.1% | 0.811 |
+| MiniLM, no intent | 68.9% | 88.9% | 0.778 |
+| MiniLM + intent | 71.1% | 88.9% | 0.793 |
+| mpnet, no intent | 77.8% | 86.7% | 0.822 |
+| mpnet + intent | 80.0% | 86.7% | 0.833 |
 
 ## Main results (test, at the threshold chosen on dev)
 
 | Setup | Threshold | Right answer (answerable) | Refused (should refuse) | Fallback precision | Wrong-answer rate | Overall accuracy | Time per question |
 |---|---|---|---|---|---|---|---|
-| MiniLM, no intent | 0.67 | 46.7% | 95.8% | 56.1% | 10.1% | 63.8% | 34 ms |
-| MiniLM + intent | 0.67 | 46.7% | 95.8% | 54.8% | 8.7% | 63.8% | 28 ms |
-| mpnet, no intent | 0.68 | 55.6% | 87.5% | 61.8% | 14.5% | 66.7% | 78 ms |
-| mpnet + intent | 0.68 | 57.8% | 87.5% | 60.0% | 11.6% | 68.1% | 74 ms |
-| MiniLM + intent (starting threshold) | 0.50 | 64.4% | 54.2% | 72.2% | 31.9% | 60.9% | 28 ms |
+| MiniLM, no intent | 0.69 | 64.4% | 91.7% | 68.8% | 11.6% | 73.9% | 37 ms |
+| MiniLM + intent | 0.69 | 64.4% | 91.7% | 66.7% | 10.1% | 73.9% | 36 ms |
+| mpnet, no intent | 0.69 | 71.1% | 66.7% | 72.7% | 21.7% | 69.6% | 77 ms |
+| mpnet + intent | 0.69 | 73.3% | 70.8% | 70.8% | 17.4% | 72.5% | 105 ms |
+| MiniLM + intent (starting threshold) | 0.50 | 71.1% | 37.5% | 100.0% | 40.6% | 59.4% | 36 ms |
 
 - **Right answer:** answerable questions that got the correct record.
 - **Refused:** off-topic or not-in-KB questions that got the fallback.
@@ -43,19 +43,19 @@ Model size: MiniLM 118M parameters, mpnet 278M parameters.
 
 | Setup (right answer / refused) | English | Hinglish | Hindi |
 |---|---|---|---|
-| MiniLM, no intent | 80.0% / 100.0% | 33.3% / 90.9% | 26.7% / 100.0% |
-| MiniLM + intent | 80.0% / 100.0% | 33.3% / 90.9% | 26.7% / 100.0% |
-| mpnet, no intent | 80.0% / 100.0% | 33.3% / 72.7% | 53.3% / 100.0% |
-| mpnet + intent | 80.0% / 100.0% | 40.0% / 72.7% | 53.3% / 100.0% |
+| MiniLM, no intent | 93.3% / 100.0% | 46.7% / 81.8% | 53.3% / 100.0% |
+| MiniLM + intent | 93.3% / 100.0% | 46.7% / 81.8% | 53.3% / 100.0% |
+| mpnet, no intent | 93.3% / 87.5% | 53.3% / 54.5% | 66.7% / 60.0% |
+| mpnet + intent | 93.3% / 87.5% | 53.3% / 54.5% | 73.3% / 80.0% |
 
 ## By question kind (test, at the chosen threshold)
 
 | Setup | Direct (right) | Paraphrase (right) | Typo (right) | Off-topic (refused) | Not in KB (refused) |
 |---|---|---|---|---|---|
-| MiniLM, no intent | 57.9% | 42.1% | 28.6% | 100.0% | 92.9% |
-| MiniLM + intent | 57.9% | 42.1% | 28.6% | 100.0% | 92.9% |
-| mpnet, no intent | 73.7% | 42.1% | 42.9% | 100.0% | 78.6% |
-| mpnet + intent | 73.7% | 47.4% | 42.9% | 100.0% | 78.6% |
+| MiniLM, no intent | 73.7% | 63.2% | 42.9% | 90.0% | 92.9% |
+| MiniLM + intent | 73.7% | 63.2% | 42.9% | 90.0% | 92.9% |
+| mpnet, no intent | 78.9% | 63.2% | 71.4% | 90.0% | 50.0% |
+| mpnet + intent | 84.2% | 63.2% | 71.4% | 90.0% | 57.1% |
 
 ## Intent classifier by script (intent dataset test split)
 
@@ -71,56 +71,49 @@ Table version of `threshold_sweep.png`.
 | Threshold | Right answer | Refused | Wrong-answer rate | Overall accuracy |
 |---|---|---|---|---|
 | 0.30 | 84.4% | 20.8% | 37.7% | 62.3% |
-| 0.35 | 82.2% | 20.8% | 37.7% | 60.9% |
-| 0.40 | 82.2% | 25.0% | 34.8% | 62.3% |
-| 0.45 | 82.2% | 37.5% | 30.4% | 66.7% |
-| 0.50 (starting) | 82.2% | 50.0% | 23.2% | 71.0% |
-| 0.55 | 80.0% | 54.2% | 20.3% | 71.0% |
-| 0.60 | 73.3% | 58.3% | 18.8% | 68.1% |
-| 0.65 | 68.9% | 87.5% | 8.7% | 75.4% |
-| 0.67 (chosen) | 66.7% | 91.7% | 7.2% | 75.4% |
-| 0.70 | 62.2% | 95.8% | 4.3% | 73.9% |
-| 0.75 | 44.4% | 100.0% | 2.9% | 63.8% |
-| 0.80 | 31.1% | 100.0% | 2.9% | 55.1% |
-| 0.85 | 13.3% | 100.0% | 0.0% | 43.5% |
+| 0.35 | 84.4% | 20.8% | 37.7% | 62.3% |
+| 0.40 | 84.4% | 20.8% | 37.7% | 62.3% |
+| 0.45 | 84.4% | 29.2% | 34.8% | 65.2% |
+| 0.50 (starting) | 84.4% | 37.5% | 31.9% | 68.1% |
+| 0.55 | 84.4% | 41.7% | 30.4% | 69.6% |
+| 0.60 | 84.4% | 45.8% | 27.5% | 71.0% |
+| 0.65 | 80.0% | 70.8% | 17.4% | 76.8% |
+| 0.69 (chosen) | 75.6% | 83.3% | 13.0% | 78.3% |
+| 0.70 | 73.3% | 83.3% | 13.0% | 76.8% |
+| 0.75 | 51.1% | 87.5% | 7.2% | 63.8% |
+| 0.80 | 35.6% | 95.8% | 4.3% | 56.5% |
+| 0.85 | 20.0% | 100.0% | 0.0% | 47.8% |
 | 0.90 | 6.7% | 100.0% | 0.0% | 39.1% |
 
-## Failures on the test split (MiniLM + intent, threshold 0.67)
+## Failures on the test split (MiniLM + intent, threshold 0.69)
 
 Each failure is classified by hand in `eval/error_analysis.md`.
 
 | Question | Lang | Kind | Expected | Got | Score | Intent |
 |---|---|---|---|---|---|---|
-| cse btech krne me har sem kitna paisa lagta hai | hinglish | paraphrase | fee_btech_cse_2026 | fallback (low score; top was contact_address) | 0.372 | hostel 0.33 |
-| what will i pay per semester for computer engineering | en | paraphrase | fee_btech_cse_2026 | fallback (low score; top was fee_btech_cse_2026) | 0.642 | fees 0.89 |
-| सीएसई बीटेक का शुल्क कितना है | hi | paraphrase | fee_btech_cse_2026 | fallback (low score; top was fee_btech_cse_2026) | 0.581 | fees 0.83 |
-| काउंसलिंग फीस कितनी है | hi | direct | fee_registration_2026 | fallback (low score; top was hostel_fees_2026) | 0.312 | fees 0.37 |
+| cse btech krne me har sem kitna paisa lagta hai | hinglish | paraphrase | fee_btech_cse_2026 | fallback (low score; top was fee_library_sports_2026) | 0.680 | hostel 0.33 |
+| सीएसई बीटेक का शुल्क कितना है | hi | paraphrase | fee_btech_cse_2026 | fallback (low score; top was fee_btech_cse_2026) | 0.597 | fees 0.83 |
+| काउंसलिंग फीस कितनी है | hi | direct | fee_registration_2026 | fallback (low score; top was hostel_fees_2026) | 0.658 | fees 0.37 |
 | securty fee wapis milti hai ya nahi | hinglish | typo | fee_security_2026 | fee_registration_2026 | 0.702 | fees 0.77 |
-| library aur sports ke liye alag se paise dene padte hai kya | hinglish | paraphrase | fee_library_sports_2026 | fallback (low score; top was contact_admissions) | 0.553 | other 0.58 |
-| लाइब्रेरी फीस हर सेमेस्टर कितनी लगती है | hi | direct | fee_library_sports_2026 | fallback (low score; top was fee_library_sports_2026) | 0.554 | fees 0.81 |
+| library aur sports ke liye alag se paise dene padte hai kya | hinglish | paraphrase | fee_library_sports_2026 | fallback (low score; top was contact_address) | 0.683 | other 0.58 |
 | hostel aur mess ka kharcha kitna aata hai saal ka | hinglish | paraphrase | hostel_fees_2026 | contact_hostel | 0.782 | hostel 0.73 |
-| how much are the mess charges per year | en | direct | hostel_fees_2026 | fallback (low score; top was fee_library_sports_2026) | 0.512 | fees 0.45 |
+| how much are the mess charges per year | en | direct | hostel_fees_2026 | fallback (low score; top was fee_security_2026) | 0.658 | fees 0.45 |
 | डबल रूम का सालाना किराया कितना है | hi | direct | hostel_fees_2026 | hostel_room_type_girls | 0.780 | hostel 0.92 |
-| ladkiyon ke liye kitne hostal hai | hinglish | typo | hostel_count_2026 | fallback (low score; top was hostel_count_2026) | 0.309 | hostel 0.54 |
-| लड़कियों के कितने हॉस्टल हैं | hi | direct | hostel_count_2026 | fallback (low score; top was hostel_count_2026) | 0.536 | hostel 0.83 |
-| छात्राओं को दूसरे साल से सिंगल रूम मिलता है क्या | hi | paraphrase | hostel_room_type_girls | fallback (low score; top was hostel_room_type_girls) | 0.638 | hostel 0.91 |
-| हॉस्टल में कमरा पाने के लिए क्या करना होगा | hi | direct | hostel_allotment | fallback (low score; top was hostel_room_type_girls) | 0.572 | hostel 0.97 |
-| abhi admission le sakte hai kya gbu me | hinglish | paraphrase | admissions_status_2026 | fallback (low score; top was admissions_status_2026) | 0.644 | admissions 0.53 |
-| इस साल दाखिला मिल सकता है क्या | hi | paraphrase | admissions_status_2026 | fallback (low score; top was admissions_status_2026) | 0.497 | admissions 0.58 |
+| ladkiyon ke liye kitne hostal hai | hinglish | typo | hostel_count_2026 | fallback (low score; top was hostel_allotment) | 0.623 | hostel 0.54 |
+| हॉस्टल में कमरा पाने के लिए क्या करना होगा | hi | direct | hostel_allotment | hostel_fees_2026 | 0.720 | hostel 0.97 |
+| हॉस्टल ऑफिस का ईमेल पता क्या है | hi | direct | contact_hostel | contact_admissions | 0.842 | contacts 0.99 |
+| इस साल दाखिला मिल सकता है क्या | hi | paraphrase | admissions_status_2026 | fallback (low score; top was admissions_status_2026) | 0.506 | admissions 0.58 |
 | admisson office ka phone no. | hinglish | typo | contact_admissions | fallback (low score; top was contact_hostel) | 0.552 | contacts 0.88 |
-| videshi student hu admission ke liye kisse baat karu | hinglish | paraphrase | contact_international | contact_admissions | 0.686 | contacts 0.44 |
-| इंटरनेशनल अफेयर्स का नंबर बताइए | hi | direct | contact_international | fallback (low score; top was contact_hostel) | 0.622 | contacts 0.89 |
-| What is the full address of Gautam Buddha University? | en | direct | contact_address | fallback (low score; top was contact_address) | 0.574 | contacts 0.95 |
-| gbu ka adress bata do | hinglish | typo | contact_address | contact_hostel | 0.689 | contacts 0.99 |
-| विश्वविद्यालय का पिन कोड क्या है | hi | paraphrase | contact_address | fallback (low score; top was contact_admissions) | 0.442 | contacts 0.62 |
-| sc/st scholarshp kitni hai | hinglish | typo | scholarship_sc_st | fallback (low score; top was scholarship_sc_st) | 0.655 | scholarships 0.27 |
-| मेधावी छात्रों के लिए कोई स्कॉलरशिप है क्या | hi | paraphrase | scholarship_general | fallback (low score; top was scholarship_sc_st) | 0.661 | scholarships 0.90 |
+| videshi student hu admission ke liye kisse baat karu | hinglish | paraphrase | contact_international | fallback (low score; top was contact_admissions) | 0.686 | contacts 0.44 |
+| gbu ka adress bata do | hinglish | typo | contact_address | fallback (low score; top was contact_hostel) | 0.689 | contacts 0.99 |
+| विश्वविद्यालय का पिन कोड क्या है | hi | paraphrase | contact_address | fallback (low score; top was contact_address) | 0.652 | contacts 0.62 |
+| bhai gf ko kya gift du | hinglish | off_topic | none | contact_address | 0.705 | other 0.43 |
 | law ki fees kitni hai gbu me | hinglish | not_in_kb | none | fee_security_2026 | 0.699 | fees 0.80 |
 
 ## Checks
 
 - Questions overlapping the knowledge base or intent data: 0 (checked before running).
 - Live search with the chosen threshold matched the sweep for every test question.
-- The app (`src/config.py`) uses threshold 0.67; the dev-tuned value for MiniLM + intent is 0.67.
+- The app (`src/config.py`) uses threshold 0.69; the dev-tuned value for MiniLM + intent is 0.69.
 
 Charts: `threshold_sweep.png`, `coverage_vs_error.png`.

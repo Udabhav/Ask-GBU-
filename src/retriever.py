@@ -106,7 +106,7 @@ class Retriever:
                     *self.records[record_index].get("also_topics", []),
                 ],
                 "question": self.records[record_index]["question"],
-                "score": round(score, 3),
+                "score": score,
             }
             for record_index, score in ranked
         ]
@@ -116,7 +116,8 @@ class Retriever:
             "intent": intent,
             "intent_confidence": None if confidence is None else round(confidence, 3),
             "topic_filter": topic_filter,
-            "score": round(best_score, 3),
+            # Not rounded: the threshold check below and the evaluation must see the same value.
+            "score": best_score,
             "matches": matches,
         }
 
@@ -163,7 +164,7 @@ if __name__ == "__main__":
             f"Intent: {result['intent']} (confidence {result['intent_confidence']}), "
             f"searched in: {result['topic_filter'] or 'all topics'}"
         )
-    print(f"Answered: {result['answered']} (best score {result['score']})")
+    print(f"Answered: {result['answered']} (best score {result['score']:.3f})")
     print(f"A: {result['answer']}")
     if result["answered"]:
         print(f"Source: {result['source_url']}")

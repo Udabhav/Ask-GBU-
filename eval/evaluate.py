@@ -475,7 +475,7 @@ def write_predictions(pairs, threshold: float, path) -> None:
                          "score", "top3", "intent", "intent_confidence"])
         for q, p in pairs:
             writer.writerow([q["question"], q["language"], q["kind"], q["expected_id"],
-                             outcome(q, p, threshold), got_text(p, threshold), p["score"],
+                             outcome(q, p, threshold), got_text(p, threshold), f"{p['score']:.3f}",
                              " ".join(p["ranked_ids"]), p["intent"], p["intent_confidence"]])
 
 

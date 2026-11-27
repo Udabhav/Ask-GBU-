@@ -14,7 +14,7 @@ TOP_K = 3
 # If the best match scores below this (0 to 1), the bot says it does not know.
 # Tuned in Phase 5 on the dev split of eval/questions.csv (the starting value was 0.50).
 # Re-tune with `python -m eval.evaluate` whenever the knowledge base changes.
-SIMILARITY_THRESHOLD = 0.67
+SIMILARITY_THRESHOLD = 0.69
 
 # Intent classifier settings (starting values; tune in Phase 5, not on the test set).
 USE_INTENT_FILTER = True

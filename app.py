@@ -74,7 +74,7 @@ def show_message(message: dict) -> None:
                     f"(confidence {result['intent_confidence']:.2f}) · searched in: {searched_in}"
                 )
             st.write(
-                f"Best score: {result['score']} (answers need at least {SIMILARITY_THRESHOLD})"
+                f"Best score: {result['score']:.3f} (answers need at least {SIMILARITY_THRESHOLD})"
             )
             for match in result["matches"]:
                 st.write(f"- {match['score']:.2f} · {match['question']}")
